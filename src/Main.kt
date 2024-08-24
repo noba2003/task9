@@ -27,9 +27,9 @@ fun main() {
     val manager2: sealed = sealed.Manager("it", "ahmed", EMP.Manager.toString(), 65)
     val developer2: sealed = sealed.Developer(Programming.java.toString(), "amer", EMP.Developer.toString(), 45)
 
-    manager2.details()
+    manager2.detailsForSealed()
     println("------------")
-    developer2.details()
+    developer2.detailsForSealed()
 
 
 }
@@ -39,20 +39,16 @@ private fun Employee.details() {
         is Manager -> {
             this.work()
             this.report()
-
         }
-
         is Developer -> {
             this.work()
             this.report()
         }
-
-
     }
 
 }
 
-private fun sealed.details() = when (this) {
+private fun sealed.detailsForSealed() = when (this) {
     is sealed.Manager -> {
         this.work()
         this.report()
