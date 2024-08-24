@@ -16,7 +16,7 @@ fun main() {
 
     }
 
-    // companion object
+    // companion object methods
     Employee.printDetails(manager)
     Employee.printDetails(developer)
 
