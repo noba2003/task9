@@ -6,17 +6,24 @@ fun main() {
     Employee.printDetails(manager)
     Employee.printDetails(developer)
     println("------------")
+    manager.work()
+    manager.report()
 
-    println(manager.work())
-    println(manager.report())
     println("------------")
-    println(developer.work())
-    println(developer.work())
+ developer.work()
+    developer.work()
     println("------------")
     manager.details()
     developer.details()
+    println("------------")
+    //sealed Class
+    var managerSealed =sealed.Manager("it", "ahmed", EMP.Manager.toString(), 65)
+    var developerSealed =sealed.Developer(Programming.java.toString(), "amer", EMP.Developer.toString(), 45)
 
-
+    managerSealed.work()
+    managerSealed.report()
+    developerSealed.work()
+    developerSealed.report()
 }
 
 fun Employee.details() {
