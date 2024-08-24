@@ -25,7 +25,7 @@ fun main() {
     developer2.details()
 }
 
-fun Employee.details() {
+private fun Employee.details() {
     when (this) {
         is Manager -> {
             this.work()
@@ -43,8 +43,7 @@ fun Employee.details() {
 
 }
 
-fun sealed.details() {
-    when (this) {
+private fun sealed.details() = when (this) {
         is sealed.Manager -> {
             this.work()
             this.report()
@@ -57,5 +56,3 @@ fun sealed.details() {
 
 
     }
-
-}
