@@ -7,7 +7,7 @@ fun main() {
     Employee.printDetails(developer)
     println("------------")
     manager.work()
-    manager.report/**/()
+    manager.report()
 
     println("------------")
     developer.work()
