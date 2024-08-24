@@ -17,26 +17,42 @@ fun main() {
     developer.details()
     println("------------")
     //sealed Class
-    val managerSealed =sealed.Manager("it", "ahmed", EMP.Manager.toString(), 65)
-    val developerSealed =sealed.Developer(Programming.java.toString(), "amer", EMP.Developer.toString(), 45)
+    val manager2:sealed =sealed.Manager("it", "ahmed", EMP.Manager.toString(), 65)
+    val developer2:sealed =sealed.Developer(Programming.java.toString(), "amer", EMP.Developer.toString(), 45)
 
-    managerSealed.work()
-    managerSealed.report()
+    manager2.details()
     println("------------")
-    developerSealed.work()
-    developerSealed.report()
+    developer2.details()
 }
 
 fun Employee.details() {
     when (this) {
         is Manager -> {
-            println(this.work())
-            println(this.report())
+            this.work()
+            this.report()
+
         }
 
         is Developer -> {
-            println(this.work())
-            println(this.report())
+            this.work()
+            this.report()
+        }
+
+
+    }
+
+}
+
+fun sealed.details() {
+    when (this) {
+        is sealed.Manager -> {
+            this.work()
+            this.report()
+        }
+
+        is sealed.Developer -> {
+            this.work()
+            this.report()
         }
 
 
