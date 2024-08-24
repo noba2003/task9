@@ -5,9 +5,6 @@ fun main() {
     val manager: Employee = Manager("HR", "ahmed", EMP.Manager.toString(), 25)
     val developer: Employee = Developer(Programming.kotlin.toString(), "ali", EMP.Developer.toString(), 365)
 
-    // companion object
-    Employee.printDetails(manager)
-    Employee.printDetails(developer)
 // Add  objects to the list of employees
     listOfEmployee.add(manager)
     listOfEmployee.add(developer)
@@ -19,10 +16,15 @@ fun main() {
 
     }
 
+    // companion object
+    Employee.printDetails(manager)
+    Employee.printDetails(developer)
 
+// extension function
     manager.details()
     developer.details()
     println("------------")
+
     //sealed Class
     val manager2: sealed = sealed.Manager("it", "ahmed", EMP.Manager.toString(), 65)
     val developer2: sealed = sealed.Developer(Programming.java.toString(), "amer", EMP.Developer.toString(), 45)
